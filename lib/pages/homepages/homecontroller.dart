@@ -5,6 +5,12 @@ import 'homeservice.dart';
 
 
 class Homecontroller extends GetxController {
+  var isTextFieldVisible = false.obs;
+
+  void toggleTextFieldVisibility() {
+    isTextFieldVisible.value = !isTextFieldVisible.value;
+  }
+
   var getapi = <Employeeitm>[].obs;
 
   ShowApi() async {
@@ -24,4 +30,8 @@ class Homecontroller extends GetxController {
     // TODO: implement onInit
     super.onInit();
   }
+
+
+
+
 }

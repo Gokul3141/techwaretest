@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 class DetailController extends GetxController{
-  String content="";
+  String name="";
   String title ="";
   String image ="";
   @override
   void onInit(){
-    content = Get.arguments==null?'': Get.arguments["content"];
+    name = Get.arguments==null?'': Get.arguments["name"];
     image = Get.arguments==null?'': Get.arguments["image"];
     title = Get.arguments==null?'': Get.arguments["title"];
     update();

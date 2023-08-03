@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../modelclass.dart';
 
 class Detailscreen extends StatelessWidget {
-  const Detailscreen({Key? key, required this.detailitm}) : super(key: key);
-  final Employeeitm detailitm;
+  const Detailscreen({Key? key, }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,6 @@ class Detailscreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(detailitm.name)
         ],
       ),
     );

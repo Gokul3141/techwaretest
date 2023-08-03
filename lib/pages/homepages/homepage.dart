@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:techwaretest/pages/homepages/search.dart';
 import 'package:techwaretest/pages/routes.dart';
 
 import 'homecontroller.dart';
@@ -8,6 +9,7 @@ class Homescreen extends StatelessWidget {
   Homescreen({Key? key}) : super(key: key);
   var homecontrol = Get.put(Homecontroller());
 
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -15,8 +17,12 @@ class Homescreen extends StatelessWidget {
     var screenWidth = screenSize.width;
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          SearchScreen(),
+
+        ],
         backgroundColor: Colors.lightBlueAccent[400],
-        title: Text("Employee List"),
+        title: Text("Employee List",style: TextStyle(color: Colors.black),),
       ),
       body: Obx(() {
         return ListView.builder(
@@ -25,7 +31,7 @@ class Homescreen extends StatelessWidget {
               final data = homecontrol.getapi[i];
               return ListTile(
                 onTap: (){
-                  Get.toNamed(AppRoutes.detailscrn);
+                  Get.toNamed(AppRoutes.detailscrn,);
 
                 },
                 leading:  Padding(

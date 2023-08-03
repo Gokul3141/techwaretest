@@ -13,7 +13,7 @@ class AppRoutes{
 
   static List<GetPage> pages = [
   GetPage(name: Homescren, page: ()=>Homescreen()),
-  GetPage(name: detailscrn, page: ()=>Detailscreen(detailitm:Employeeitm.fromJson(jsonDecode(detailscrn)),)),
+  GetPage(name: detailscrn, page: ()=>Detailscreen()),
   ];
   
 }
